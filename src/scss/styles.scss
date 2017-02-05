@@ -1,1 +1,11 @@
-h1 { color: grey; }
+.flex-it {
+  display: flex;
+  flex-flow: row wrap;
+}
+dt {
+  visibility: hidden;
+}
+/* We tell all items to be 100% width */
+@mixin flex-full-width {
+  flex: 1 100%;
+}
