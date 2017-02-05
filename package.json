@@ -6,7 +6,9 @@
   "scripts": {
     "build:scss": "node-sass src/scss/styles.scss dist/styles.css --output-style compressed",
     "build": "npm run build:scss",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags"
   },
   "author": "Raymond So",
   "license": "ISC"
