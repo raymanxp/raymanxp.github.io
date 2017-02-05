@@ -1,0 +1,13 @@
+{
+  "name": "raymanxp.github.io",
+  "version": "0.0.1",
+  "description": "Raymond So",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "node-sass src/scss/styles.scss dist/styles.css --output-style compressed",
+    "build": "npm run build:scss",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raymond So",
+  "license": "ISC"
+}
