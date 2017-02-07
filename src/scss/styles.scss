@@ -1,11 +1,89 @@
-.flex-it {
-  display: flex;
-  flex-flow: row wrap;
-}
-dt {
-  visibility: hidden;
-}
+@import url( 'https://fonts.googleapis.com/css?family=EB+Garamond');
+@import 'palette.scss';
 /* We tell all items to be 100% width */
 @mixin flex-full-width {
-  flex: 1 100%;
+    flex: 1 100%;
+}
+
+.profile,
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    padding: 0;
+    margin: 0;
+}
+
+dt {
+    visibility: hidden;
+}
+
+article {
+    display: inline-block;
+}
+section {
+  padding: 1rem;
+}
+
+.aside,
+.footer,
+.header,
+.main,
+.nav {
+    @include flex-full-width;
+}
+.hide {
+  display: none;
+}
+.flex-it {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    > * {
+      flex: 1 auto;
+    }
+}
+
+.profile {
+    display: inline-block;
+    background-color: $color-primary-1;
+    height: 100%;
+    padding: 1rem;
+    // position: absolute;
+    color: $color-primary-3;
+}
+
+.hexagon {
+  position: relative;
+  width: 300px;
+  height: 173.21px;
+  background-color: $color-secondary-1-0;
+  margin: 86.60px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 86.60px solid $color-secondary-1-0;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 86.60px solid $color-secondary-1-0;
 }
