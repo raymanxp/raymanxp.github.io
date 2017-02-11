@@ -4,11 +4,11 @@
   "description": "Raymond So",
   "main": "index.js",
   "scripts": {
-    "build:scss": "node-sass src/scss/styles.scss dist/styles.css --output-style compressed",
+    "build:scss": "node-sass src/scss/styles.scss dist/styles.css",
     "build": "npm run build:scss",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "npm run build && git add -A dist",
-    "watch:css": "nodemon -e scss -x \"npm run build:scss\"",
+    "watch:css": "nodemon -e src/scss -x \"npm run build:scss\"",
     "postversion": "git push && git push --tags"
   },
   "author": "Raymond So",
