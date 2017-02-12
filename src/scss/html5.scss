@@ -1,0 +1,77 @@
+@import 'palette.scss';
+a {
+  color: $color-secondary-2-0;
+  font-family: 'Roboto Mono', monospace;
+}
+a:hover {
+  color: $color-secondary-2-1;
+}
+article {
+  background-color: #fff;
+  flex: 3 1;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  position: relative;
+  order: 2;
+  section {
+    border-bottom: 2px dashed #d3d3d3;
+    margin-bottom: 1.2rem;
+  }
+}
+body {
+  background-color: #f2f2f2;
+  font-family: 'EB Garamond', serif;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+dt {
+  visibility: hidden;
+}
+dd,
+dt {
+  padding: 0;
+  margin: 0;
+}
+main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oxygen', sans-serif;
+}
+h4,
+h5,
+h6 {
+  color: $color-primary-0;
+}
+h2,
+h3 {
+  margin-top: 0;
+}
+h3 {
+  color: $color-primary-2;
+}
+h2 {
+  font-size: 1.8rem;
+}
+section {
+  margin: 0;
+  padding: 0;
+}
+u {
+  border-bottom: 4px solid $color-primary-1;
+  text-decoration: none;
+}

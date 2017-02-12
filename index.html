@@ -13,27 +13,32 @@
 </head>
 
 <body>
-  <main class="flex-it">
+
     <!-- <header></header> -->
     <h1 class="hide">Raymond So's Resume</h1>
+    <main class="flex-container">
     <aside class="profile">
       <section>
-        <h2>Raymond So</h2>
-        <!-- <img> place holder removing due to validation error-->
+        <h2 class="name">Raymond So</h2>
+        <div class="profile-container">
+          <!-- <img> place holder removing due to validation error-->
+          <img src="asset/profile.jpg"/>
+        </div>
+
         <!-- <div class="hexagon"></div> -->
-        <h3>Developer</h3>
+        <h3 class="text-center">Developer</h3>
       </section>
       <section>
-        <h2>Contact</h2>
+        <h2><u>Contact</u></h2>
         <dl>
-          <dt>Phone</dt>
+          <dt><span>Phone</span></dt>
           <dd>+1 (647) 298-5811</dd>
           <dt>Email</dt>
           <dd>raymondso.1216[at]gmail.com</dd>
         </dl>
       </section>
       <section>
-        <h2>Social</h2>
+        <h2><u>Social</u></h2>
         <dl>
           <dt>Github</dt>
           <dd>
@@ -63,20 +68,20 @@
     <article>
       <h2 class="hide">Main Resume Section</h2>
       <section>
-        <h2>About</h2>
+        <h2><u>About</u></h2>
         <p>
           Implementations of various layers of software development technologies. Continuous build and deployment scripting, development of front and back-end components of enterprise systems.
         </p>
       </section>
 
       <section>
-        <h2>Project Accomplishments</h2>
+        <h2><u>Project Accomplishments</u></h2>
         <!-- Timeline -->
         <section>
           <h3>Electronic Approvals</h3>
           <p>Implement new domain modules for identifying qualified candidates for approvals, to initiate, and complete electronically.</p>
           <h4>Technologies</h4>
-          <ul>
+          <ul class="skills">
             <li>Java (Seam, JSF, Richfaces)</li>
             <li>HTML</li>
             <li>CSS (Less)</li>
@@ -295,8 +300,9 @@
       </span>
       </section>
     </article>
-    <!-- <footer>footer</footer> -->
   </main>
+    <!-- <footer>footer</footer> -->
+
 </body>
 
 </html>

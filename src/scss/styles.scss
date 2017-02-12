@@ -1,101 +1,110 @@
-@import url( 'https://fonts.googleapis.com/css?family=EB+Garamond');
+@import url( 'https://fonts.googleapis.com/css?family=EB+Garamond|Roboto+Mono|Oxygen');
 @import 'palette.scss';
-/* We tell all items to be 100% width */
-@mixin flex-full-width {
-    flex: 2 100%;
-}
-
-.profile,
-body,
-html {
-    height: 100%;
-}
-
-body {
-    font-family: 'EB Garamond', serif;
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-}
-
-dt {
-    visibility: hidden;
-}
-
-dd,
-dt {
-    padding: 0;
-    margin: 0;
-}
-
-article {
-  display: inline-flex;
-    flex: 3 1;
-    position: relative;
-    order: 2;
-}
-
-section {
-    padding: 1rem;
-}
-
+@import 'html5.scss';
 .hide {
-    display: none;
+  display: none;
 }
-
-.flex-it {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    justify-content: space-around;
+.name {
+  font-size: 2rem;
 }
-
+.text-center {
+  text-align: center;
+}
+ul.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    border: 1px solid #d2d2d2;
+    color: $color-primary-4;
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    padding: 0.4rem;
+  }
+}
 .profile {
-    background-color: $color-primary-1;
-    color: $color-primary-3;
-    display: flex;
-    flex: 1 6 33%;
-    height: 100%;
-    margin-left: 2rem;
-    padding: 1rem;
-    order: 1;
-    position: relative;
-    h2,
-    h3 {
-        text-align: center;
-        color: #fff;
-        font-size: 2.0rem;
-    }
+  //background-color: $color-primary-2;
+  background-color: #fff;
+  //border: 1px solid $color-primary-2;
+  border-left: 0.8rem solid $color-primary-2;
+  //border-bottom: 0.5rem solid $color-primary-2;
+  //color: $color-primary-3;
+  flex: 1 6;
+  height: 100%;
+  //margin-left: 0.5rem;
+  max-width: 300px;
+  padding: 1rem;
+  order: 1;
+  position: relative;
 }
-
+.profile-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  > img {
+    border-radius: 100%;
+    width: 100%;
+  }
+}
+// .profile {
+//   background-color: $color-primary-2;
+//   color: $color-primary-3;
+//   flex: 1 6;
+//   height: 100%;
+//   margin: 0 2rem;
+//   padding: 1rem;
+//   order: 1;
+//   position: relative;
+//   h2,
+//   h3 {
+//     margin-top: 0;
+//     text-align: center;
+//     color: #fff;
+//     font-size: 2.0rem;
+//   }
+// }
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+/* ----------- iPhone 5 and 5S ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
 .hexagon {
-    position: relative;
-    width: 300px;
-    height: 173.21px;
-    background-color: $color-secondary-1-0;
-    margin: 86.60px 0;
+  position: relative;
+  width: 300px;
+  height: 173.21px;
+  background-color: $color-secondary-1-0;
+  margin: 86.60px 0;
 }
-
 .hexagon:after,
 .hexagon:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
 }
-
 .hexagon:before {
-    bottom: 100%;
-    border-bottom: 86.60px solid $color-secondary-1-0;
+  bottom: 100%;
+  border-bottom: 86.60px solid $color-secondary-1-0;
 }
-
 .hexagon:after {
-    top: 100%;
-    width: 0;
-    border-top: 86.60px solid $color-secondary-1-0;
+  top: 100%;
+  width: 0;
+  border-top: 86.60px solid $color-secondary-1-0;
 }

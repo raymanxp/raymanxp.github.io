@@ -1,11 +1,24 @@
-@import url("https://fonts.googleapis.com/css?family=EB+Garamond");
-/* We tell all items to be 100% width */
-.profile,
-body,
-html {
-  height: 100%; }
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Roboto+Mono|Oxygen");
+a {
+  color: #2D8632;
+  font-family: 'Roboto Mono', monospace; }
+
+a:hover {
+  color: #4CEF56; }
+
+article {
+  background-color: #fff;
+  flex: 3 1;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  position: relative;
+  order: 2; }
+  article section {
+    border-bottom: 2px dashed #d3d3d3;
+    margin-bottom: 1.2rem; }
 
 body {
+  background-color: #f2f2f2;
   font-family: 'EB Garamond', serif;
   padding: 0;
   margin: 0;
@@ -19,19 +32,7 @@ dt {
   padding: 0;
   margin: 0; }
 
-article {
-  display: inline-flex;
-  flex: 3 1;
-  position: relative;
-  order: 2; }
-
-section {
-  padding: 1rem; }
-
-.hide {
-  display: none; }
-
-.flex-it {
+main {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -39,23 +40,97 @@ section {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: stretch; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oxygen', sans-serif; }
+
+h4,
+h5,
+h6 {
+  color: #AA6D39; }
+
+h2,
+h3 {
+  margin-top: 0; }
+
+h3 {
+  color: #F29A4F; }
+
+h2 {
+  font-size: 1.8rem; }
+
+section {
+  margin: 0;
+  padding: 0; }
+
+u {
+  border-bottom: 4px solid #FFA151;
+  text-decoration: none; }
+
+.hide {
+  display: none; }
+
+.name {
+  font-size: 2rem; }
+
+.text-center {
+  text-align: center; }
+
+ul.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul.skills li {
+    border: 1px solid #d2d2d2;
+    color: #191109;
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    margin: .2rem;
+    padding: 0.4rem; }
 
 .profile {
-  background-color: #FFA151;
-  color: #623F21;
-  display: flex;
-  flex: 1 6 33%;
+  background-color: #fff;
+  border-left: 0.8rem solid #F29A4F;
+  flex: 1 6;
   height: 100%;
-  margin-left: 2rem;
+  max-width: 300px;
   padding: 1rem;
   order: 1;
   position: relative; }
-  .profile h2,
-  .profile h3 {
-    text-align: center;
-    color: #fff;
-    font-size: 2.0rem; }
+
+.profile-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; }
+  .profile-container > img {
+    border-radius: 100%;
+    width: 100%; }
+
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch; }
+
+/* ----------- iPhone 5 and 5S ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .flex-container {
+    flex-direction: column; } }
 
 .hexagon {
   position: relative;

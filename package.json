@@ -14,6 +14,6 @@
   "author": "Raymond So",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.5.0",
+    "node-sass": "^4.5.0"
   }
 }
