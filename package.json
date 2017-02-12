@@ -8,13 +8,12 @@
     "build": "npm run build:scss",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "npm run build && git add -A dist",
-    "watch:css": "nodemon -e src/scss -x \"npm run build:scss\"",
+    "watch:css": "node-sass -w src/scss -o dist/",
     "postversion": "git push && git push --tags"
   },
   "author": "Raymond So",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.5.0",
-    "nodemon": "^1.11.0"
   }
 }

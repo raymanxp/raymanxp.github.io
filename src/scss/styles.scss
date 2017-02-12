@@ -2,7 +2,7 @@
 @import 'palette.scss';
 /* We tell all items to be 100% width */
 @mixin flex-full-width {
-    flex: 1 100%;
+    flex: 2 100%;
 }
 
 .profile,
@@ -15,29 +15,34 @@ body {
     font-family: 'EB Garamond', serif;
     padding: 0;
     margin: 0;
+    font-size: 18px;
 }
 
 dt {
     visibility: hidden;
 }
 
-article {
-    display: inline-block;
-}
-section {
-  padding: 1rem;
+dd,
+dt {
+    padding: 0;
+    margin: 0;
 }
 
-.aside,
-.footer,
-.header,
-.main,
-.nav {
-    @include flex-full-width;
+article {
+  display: inline-flex;
+    flex: 3 1;
+    position: relative;
+    order: 2;
 }
+
+section {
+    padding: 1rem;
+}
+
 .hide {
-  display: none;
+    display: none;
 }
+
 .flex-it {
     display: -webkit-box;
     display: -moz-box;
@@ -46,44 +51,51 @@ section {
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
-    > * {
-      flex: 1 auto;
-    }
+    justify-content: space-around;
 }
 
 .profile {
-    display: inline-block;
     background-color: $color-primary-1;
-    height: 100%;
-    padding: 1rem;
-    // position: absolute;
     color: $color-primary-3;
+    display: flex;
+    flex: 1 6 33%;
+    height: 100%;
+    margin-left: 2rem;
+    padding: 1rem;
+    order: 1;
+    position: relative;
+    h2,
+    h3 {
+        text-align: center;
+        color: #fff;
+        font-size: 2.0rem;
+    }
 }
 
 .hexagon {
-  position: relative;
-  width: 300px;
-  height: 173.21px;
-  background-color: $color-secondary-1-0;
-  margin: 86.60px 0;
+    position: relative;
+    width: 300px;
+    height: 173.21px;
+    background-color: $color-secondary-1-0;
+    margin: 86.60px 0;
 }
 
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
+.hexagon:after,
+.hexagon:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
 }
 
 .hexagon:before {
-  bottom: 100%;
-  border-bottom: 86.60px solid $color-secondary-1-0;
+    bottom: 100%;
+    border-bottom: 86.60px solid $color-secondary-1-0;
 }
 
 .hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 86.60px solid $color-secondary-1-0;
+    top: 100%;
+    width: 0;
+    border-top: 86.60px solid $color-secondary-1-0;
 }
