@@ -17,10 +17,10 @@
     <!-- <header></header> -->
     <h1 class="hide">Raymond So's Resume</h1>
     <main class="flex-container">
-    <aside class="profile">
+    <aside class="profile-container">
       <section>
         <h2 class="name">Raymond So</h2>
-        <div class="profile-container">
+        <div class="profile-image profile-hide ">
           <!-- <img> place holder removing due to validation error-->
           <img src="asset/profile.jpg"/>
         </div>
@@ -54,7 +54,7 @@
           </dd>
         </dl>
       </section>
-      <section>
+      <section class="profile-hide">
         <h2>Passions</h2>
         <ul>
           <li>User Experience</li>
@@ -81,7 +81,7 @@
           <h3>Electronic Approvals</h3>
           <p>Implement new domain modules for identifying qualified candidates for approvals, to initiate, and complete electronically.</p>
           <h4>Technologies</h4>
-          <ul class="skills">
+          <ul class="skills-list">
             <li>Java (Seam, JSF, Richfaces)</li>
             <li>HTML</li>
             <li>CSS (Less)</li>
@@ -102,7 +102,7 @@
           <h3>Questionnaire</h3>
           <p>Implement new module in system with guided workflow and questionnaire to calculate an investment profile.</p>
           <h4>Technologies</h4>
-          <ul>
+          <ul class="skills-list">
             <li>Java (Seam, JSF, Richfaces)</li>
             <li>HTML</li>
             <li>CSS (Less)</li>
@@ -129,7 +129,7 @@
           </ol>
 
           <h4>Technologies</h4>
-          <ul>
+          <ul class="skills-list">
             <li>Java</li>
             <li>JSF</li>
             <li>CSS</li>
@@ -145,7 +145,7 @@
           <h3>Non-Financial Update Component</h3>
           <p>Standalone project to add new update type in existing system.</p>
           <h4>Technologies</h4>
-          <ul>
+          <ul class="skills-list">
             <li>Java; internal systems</li>
             <li>Third party API</li>
           </ul>
@@ -160,7 +160,7 @@
           <h3>Document Look up and generation</h3>
           <p>Small-sized project to allow searching and generating of documents. Initial project with in-house designer.</p>
           <h4>Technologies</h4>
-          <ul>
+          <ul class="skills-list">
             <li>Java</li>
             <li>JSF</li>
             <li>HTML/CSS</li>
@@ -175,7 +175,7 @@
           <h3>Third Party Document Retrieval</h3>
           <p>First standalone project to integrate third party document repository for user retrieval.</p>
           <h4>Technologies</h4>
-          <ul>
+          <ul class="skills-list">
             <li>Java; Internal Systems</li>
             <li>Third party API</li>
             <li>SoapUI</li>
@@ -189,7 +189,7 @@
           <h3>Continuous Code Analysis</h3>
           <p>Implement FindBugs static code analysis tool to continuous build and deploy cycle. Create method of analyzing of net new code base, and method of generating new base line.
           </p>
-          <h4>Technologies</h4>
+          <h4 class="skills-list">Technologies</h4>
           <ul>
             <li>Maven</li>
             <li>FindBugs</li>
@@ -206,7 +206,7 @@
           <h3>Continuous Deployment Migration</h3>
           <p>Project to migrate from CruiseControl to Bamboo as continuous build and deployment tool. Project covered proof of concept and migration to production stable state.</p>
           <h4>Technologies</h4>
-          <ul>
+          <ul class="skills-list">
             <li>CruiseControl</li>
             <li>Bamboo</li>
             <li>Maven</li>
@@ -223,9 +223,9 @@
         </section>
       </section>
       <section>
-        <h2>Skill Summary</h2>
+        <h2><u>Skill Summary</u></h2>
         <h3>Development</h3>
-        <ul>
+        <ul class="skills-list">
           <li>Clean code</li>
           <li>Design patterns</li>
           <li>Unit Testing</li>
@@ -236,7 +236,7 @@
           <li>SOAP UI</li>
         </ul>
         <h3>Design</h3>
-        <ul>
+        <ul class="skills-list">
           <li>User research</li>
           <li>Personas development</li>
           <li>Collaborative design sessions</li>
@@ -247,7 +247,7 @@
           <li>Accessibility</li>
         </ul>
         <h3>Leadership</h3>
-        <ul>
+        <ul class="skills-list">
           <li>Cross-functional leadership</li>
           <li>Create and update operational procedures</li>
           <li>Process improvement</li>
@@ -255,9 +255,9 @@
         </ul>
       </section>
       <section>
-        <h2>Technologies</h2>
+        <h2><u>Technologies</u></h2>
         <h3>Build and Deployment</h3>
-        <ul>
+        <ul class="skills-list">
           <li>Dependency Management (Maven, npm)</li>
           <li>Cloud deploy (Amzaon AWS, Heroku)</li>
           <li>Atlassian Bamboo</li>
@@ -265,7 +265,7 @@
           <li>Scripting (Ant, Groovy, shell)</li>
         </ul>
         <h3>Development Languages</h3>
-        <ul>
+        <ul class="skills-list">
           <li>Java</li>
           <li>HTML, CSS</li>
           <li>Javascript</li>
@@ -273,7 +273,7 @@
           <li>XML, XSLT</li>
         </ul>
         <h3>Frameworks</h3>
-        <ul>
+        <ul class="skills-list">
           <li>Angular 2</li>
           <li>jQuery</li>
           <li>Seam</li>
@@ -283,7 +283,7 @@
 
       </section>
       <section>
-        <h2>Experiences</h2>
+        <h2><u>Experiences</u></h2>
         <h3><span>Univeris (mid 2016-current) Team Lead</span></h3>
         <p>Manage team backlog, sprint planning, and documenting templates for reports of various roles.</p>
         <h3><span>Univeris (2013) Developer</span></h3>
@@ -294,7 +294,7 @@
         <p>Responsible for continuous build and deployment of Enterprise Software initially with CruiseControl, and later migration to Atlassian Bamboo.</p>
       </section>
       <section>
-        <h2>Education</h2>
+        <h2><u>Education</u></h2>
         <span>
         <b>B.A., Computer Science</b>, Atkinson Faculty of Liberal &amp; Professional Studies. York University, 2008.
       </span>

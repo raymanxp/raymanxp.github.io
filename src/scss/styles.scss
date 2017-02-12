@@ -1,16 +1,17 @@
 @import url( 'https://fonts.googleapis.com/css?family=EB+Garamond|Roboto+Mono|Oxygen');
 @import 'palette.scss';
+@import 'mixins.scss';
 @import 'html5.scss';
 .hide {
   display: none;
 }
 .name {
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 .text-center {
   text-align: center;
 }
-ul.skills {
+ul.skills-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -25,7 +26,7 @@ ul.skills {
     padding: 0.4rem;
   }
 }
-.profile {
+.profile-container {
   //background-color: $color-primary-2;
   background-color: #fff;
   //border: 1px solid $color-primary-2;
@@ -35,55 +36,101 @@ ul.skills {
   flex: 1 6;
   height: 100%;
   //margin-left: 0.5rem;
-  max-width: 300px;
+  //max-width: 300px;
   padding: 1rem;
   order: 1;
   position: relative;
 }
-.profile-container {
+.profile-image {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
   > img {
     border-radius: 100%;
+    display: block;
     width: 100%;
   }
 }
-// .profile {
-//   background-color: $color-primary-2;
-//   color: $color-primary-3;
-//   flex: 1 6;
-//   height: 100%;
-//   margin: 0 2rem;
-//   padding: 1rem;
-//   order: 1;
-//   position: relative;
-//   h2,
-//   h3 {
-//     margin-top: 0;
-//     text-align: center;
-//     color: #fff;
-//     font-size: 2.0rem;
-//   }
-// }
 .flex-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: stretch;
+  @include flex-row();
+  margin: 0.5rem;
 }
-/* ----------- iPhone 5 and 5S ----------- */
-/* Portrait */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+//      Media Queries
+// ========================
+/* Small portrait */
+@media all and (min-width: 320px) and (max-width: 667px) and (orientation: portrait) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
   .flex-container {
     flex-direction: column;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  .profile-image {
+    > img {
+      border-radius: 100%;
+      width: 50%;
+      margin: 0 auto;
+    }
   }
 }
+@media all and (min-width: 320px) and (max-width: 667px) and (orientation: landscape) {
+  .flex-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  .profile-container {
+    display: flex;
+    flex: auto;
+    height: auto;
+    padding: 4px;
+    flex-direction: column;
+    h2 {
+      font-size: 1rem;
+    }
+    h2,
+    h3 {
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
+    }
+    section {
+      margin-right: 0.8rem;
+      margin-bottom: 4px;
+      display: flex;
+    }
+  }
+  dl,
+  dl::after,
+  dl::before {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    padding: 0;
+  }
+  dd,
+  dt {
+    display: inline-block;
+  }
+  .profile-hide {
+    display: none !important;
+  }
+  a {
+    font-size: 0.9rem;
+  }
+}
+@media all and (min-width: 667px) and (max-width: 1023px) {}
 .hexagon {
   position: relative;
   width: 300px;
