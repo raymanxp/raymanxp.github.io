@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=EB+Garamond|Roboto+Mono|Oxygen");
 a {
   color: #2D8632;
-  font-family: 'Roboto Mono', monospace; }
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem; }
 
 a:hover {
   color: #4CEF56; }
@@ -15,6 +16,7 @@ article {
   order: 2; }
   article section {
     border-bottom: 2px dashed #d3d3d3;
+    padding-bottom: 0.5rem;
     margin-bottom: 1.2rem; }
 
 body {
@@ -25,13 +27,15 @@ body {
   margin: 0;
   min-width: 320px; }
 
-dt {
-  visibility: hidden; }
-
 dd,
 dt {
+  display: inline-block;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  word-wrap: break-word; }
+
+dt {
+  display: none; }
 
 h1,
 h2,
@@ -59,6 +63,8 @@ h2 {
 section {
   margin: 0;
   padding: 0; }
+  section + section:last-of-type {
+    border: none; }
 
 u {
   border-bottom: 4px solid #FFA151;
@@ -66,7 +72,7 @@ u {
 
 ul {
   list-style-position: inside;
-  padding-left: .9rem; }
+  padding-left: 0.9rem; }
 
 .hide {
   display: none; }
@@ -120,6 +126,28 @@ ul.skills-list {
   justify-content: space-around;
   align-items: stretch;
   margin: 0.5rem; }
+
+.timeline {
+  position: relative;
+  padding-left: 1.7rem;
+  margin: 2rem 0; }
+  .timeline section::before {
+    content: '';
+    position: absolute;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: #fff;
+    border: 0.4rem solid #F29A4F;
+    border-radius: 100%;
+    left: -.65rem; }
+
+.timeline::before {
+  content: '';
+  height: 100%;
+  left: 0;
+  width: 5px;
+  background-color: #F29A4F;
+  position: absolute; }
 
 /* Small portrait */
 @media all and (min-width: 320px) and (max-width: 667px) and (orientation: portrait) {
@@ -175,27 +203,3 @@ ul.skills-list {
     display: none !important; }
   a {
     font-size: 0.9rem; } }
-
-.hexagon {
-  position: relative;
-  width: 300px;
-  height: 173.21px;
-  background-color: #2E4272;
-  margin: 86.60px 0; }
-
-.hexagon:after,
-.hexagon:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent; }
-
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 86.6px solid #2E4272; }
-
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 86.6px solid #2E4272; }
