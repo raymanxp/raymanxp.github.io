@@ -210,7 +210,7 @@ ul.skills-list {
       display: flex; }
   dl div {
     display: inline-block;
-    margin-right: .5rem; }
+    margin-right: 0.5rem; }
   dl,
   dl::after,
   dl::before {
