@@ -6,6 +6,11 @@ My Resume
 
 ## Release Notes
 
+### v2.0.0
+* Added styles
+* Added SVG Icons
+* Minor edits
+
 ### v1.0.1
 * Fix W3C validation errors
 

@@ -1,4 +1,3 @@
-* styled
 * responsive image
 * moment.js associated with dates
   - S,M,L variations
