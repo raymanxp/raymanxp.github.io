@@ -1,11 +1,177 @@
-.flex-it {
-  display: flex;
-  flex-flow: row wrap;
+@import url( 'https://fonts.googleapis.com/css?family=EB+Garamond|Roboto+Mono|Oxygen');
+@import 'palette.scss';
+@import 'mixins.scss';
+@import 'html5.scss';
+.hide {
+  display: none;
 }
-dt {
-  visibility: hidden;
+.name {
+  font-size: 2rem !important;
 }
-/* We tell all items to be 100% width */
-@mixin flex-full-width {
-  flex: 1 100%;
+.text-center {
+  text-align: center;
 }
+#body-footer {
+  border-top: 2px dashed #d3d3d3;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.attributions {
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  a {
+    font-size: 0.7rem;
+  }
+}
+ul.skills-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  li {
+    border: 1px solid #d2d2d2;
+    color: $color-primary-4;
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.67rem;
+    margin: 0.2rem;
+    padding: 0.4rem;
+  }
+}
+.profile-container {
+  //background-color: $color-primary-2;
+  background-color: #fff;
+  //border: 1px solid $color-primary-2;
+  border-left: 0.8rem solid $color-primary-2;
+  //border-bottom: 0.5rem solid $color-primary-2;
+  //color: $color-primary-3;
+  flex: 1 6;
+  height: 100%;
+  //margin-left: 0.5rem;
+  //max-width: 300px;
+  padding: 1rem;
+  order: 1;
+  position: relative;
+}
+.profile-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  > img {
+    border-radius: 100%;
+    display: block;
+    width: 100%;
+  }
+}
+.flex-container {
+  @include flex-row();
+  margin: 0.5rem;
+}
+.skills-summary-flex-item {
+  flex: 1 1;
+  margin-right: 0.25rem;
+}
+.timeline {
+  position: relative;
+  padding-left: 1.7rem;
+  margin: 2rem 0;
+  section::before {
+    content: '';
+    position: absolute;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: #fff;
+    border: 0.4rem solid $color-primary-2;
+    border-radius: 100%;
+    left: -.65rem;
+  }
+}
+.timeline::before {
+  content: '';
+  height: 100%;
+  left: 0;
+  width: 5px;
+  background-color: $color-primary-2;
+  position: absolute;
+}
+//      Media Queries
+// ========================
+/* Small portrait */
+@media all and (min-width: 320px) and (max-width: 667px) and (orientation: portrait) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .flex-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  .profile-image {
+    > img {
+      border-radius: 100%;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}
+@media all and (min-width: 320px) and (max-width: 667px) and (orientation: landscape) {
+  .flex-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  .profile-container {
+    display: flex;
+    flex: auto;
+    height: auto;
+    padding: 4px;
+    flex-direction: column;
+    h2 {
+      font-size: 1rem;
+    }
+    h2,
+    h3 {
+      margin: 0 0.5rem 0 0;
+      padding: 0;
+      vertical-align: baseline;
+    }
+    section {
+      margin-right: 0.8rem;
+      margin-bottom: 4px;
+      display: flex;
+    }
+  }
+  dl div {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  dl,
+  dl::after,
+  dl::before {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    padding: 0;
+  }
+  dd,
+  dt {
+    display: inline-block;
+  }
+  .profile-hide {
+    display: none !important;
+  }
+  a {
+    font-size: 0.9rem;
+  }
+}
+@media all and (min-width: 667px) and (max-width: 1023px) {}
