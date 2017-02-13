@@ -13,7 +13,7 @@
 }
 ul.skills-list {
   list-style: none;
-  margin: 0;
+  margin: 0 0 1rem;
   padding: 0;
   li {
     border: 1px solid #d2d2d2;
@@ -21,7 +21,7 @@ ul.skills-list {
     display: inline-block;
     font-weight: bold;
     font-family: 'Roboto Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.67rem;
     margin: 0.2rem;
     padding: 0.4rem;
   }
@@ -54,6 +54,10 @@ ul.skills-list {
 .flex-container {
   @include flex-row();
   margin: 0.5rem;
+}
+.skills-summary-flex-item {
+  flex: 1 1;
+  margin-right: 0.25rem;
 }
 .timeline {
   position: relative;
@@ -125,7 +129,7 @@ ul.skills-list {
     }
     h2,
     h3 {
-      margin: 0;
+      margin: 0 0.5rem 0 0;
       padding: 0;
       vertical-align: baseline;
     }

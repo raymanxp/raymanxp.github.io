@@ -71,4 +71,5 @@ u {
 
 ul {
   list-style-position: inside;
-  padding-left: 0.9rem; }
+  padding-left: 0.9rem;
+  margin: .5rem 0; }
