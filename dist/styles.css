@@ -27,15 +27,16 @@ body {
   margin: 0;
   min-width: 320px; }
 
+dl div {
+  text-overflow: ellipsis; }
+
 dd,
 dt {
   display: inline-block;
   padding: 0;
   margin: 0;
-  word-wrap: break-word; }
-
-dt {
-  display: none; }
+  word-wrap: break-word;
+  vertical-align: top; }
 
 h1,
 h2,
@@ -71,8 +72,8 @@ u {
   text-decoration: none; }
 
 ul {
-  list-style-position: inside;
-  padding-left: 0.9rem;
+  list-style-position: outside;
+  padding-left: 1.25rem;
   margin: 0.5rem 0; }
 
 .hide {
@@ -83,6 +84,18 @@ ul {
 
 .text-center {
   text-align: center; }
+
+#body-footer {
+  border-top: 2px dashed #d3d3d3;
+  margin-top: 2rem;
+  padding: 1rem; }
+
+.attributions {
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem; }
+  .attributions a {
+    font-size: 0.7rem; }
 
 ul.skills-list {
   list-style: none;
@@ -130,7 +143,7 @@ ul.skills-list {
 
 .skills-summary-flex-item {
   flex: 1 1;
-  margin-right: .25rem; }
+  margin-right: 0.25rem; }
 
 .timeline {
   position: relative;
@@ -195,6 +208,9 @@ ul.skills-list {
       margin-right: 0.8rem;
       margin-bottom: 4px;
       display: flex; }
+  dl div {
+    display: inline-block;
+    margin-right: .5rem; }
   dl,
   dl::after,
   dl::before {

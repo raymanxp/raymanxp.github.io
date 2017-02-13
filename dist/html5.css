@@ -26,15 +26,16 @@ body {
   margin: 0;
   min-width: 320px; }
 
+dl div {
+  text-overflow: ellipsis; }
+
 dd,
 dt {
   display: inline-block;
   padding: 0;
   margin: 0;
-  word-wrap: break-word; }
-
-dt {
-  display: none; }
+  word-wrap: break-word;
+  vertical-align: top; }
 
 h1,
 h2,
@@ -70,6 +71,6 @@ u {
   text-decoration: none; }
 
 ul {
-  list-style-position: inside;
-  padding-left: 0.9rem;
-  margin: .5rem 0; }
+  list-style-position: outside;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0; }
