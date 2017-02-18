@@ -14,14 +14,17 @@
 #body-footer {
   border-top: 2px dashed #d3d3d3;
   margin-top: 2rem;
-  padding: 1rem;
 }
 .attributions {
-  width: 100%;
   text-align: center;
   font-size: 0.75rem;
+  padding: 1rem;
   a {
     font-size: 0.7rem;
+  }
+  span {
+    word-wrap: break-word;
+    word-break: normal;
   }
 }
 ul.skills-list {
