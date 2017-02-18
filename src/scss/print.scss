@@ -1,0 +1,96 @@
+@media print {
+  body {
+    font-size: 10pt;
+  }
+  /*.hide-print {
+    display: none;
+  }*/
+  .show-print {
+    display: none;
+  }
+  a {
+    font-size: 9pt;
+  }
+  a:after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+  }
+  h2 {
+    font-size: 12pt; //    page-break-before: always;
+    page-break-after: avoid;
+  }
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 0.5rem;
+    page-break-after: avoid;
+  }
+  .timeline {
+    padding-left: 0.5rem !important;
+    margin: 0;
+  }
+  .timeline::before {
+    display: none;
+  }
+  .timeline section::before {
+    display: none;
+  }
+  // Section that follows mobile landscape view
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    -webkit-flex-direction: column;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+    flex: auto;
+  }
+  ul.skills-list li {
+    font-size: 7pt !important;
+  }
+  .profile-container {
+    display: flex;
+    flex: 2 1;
+    height: auto;
+    padding: 4px;
+    width: 100%;
+    flex-direction: column;
+    h2 {
+      font-size: 12pt;
+    }
+    h3 {
+      font-size: 11pt;
+    }
+    h2,
+    h3 {
+      margin: 0 0.5rem 0 0;
+      padding: 0;
+      vertical-align: baseline;
+    }
+    section {
+      margin-right: 0.8rem;
+      margin-bottom: 4px;
+      display: flex;
+    }
+  }
+  dl div {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  dl,
+  dl::after,
+  dl::before {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    padding: 0;
+  }
+  dd,
+  dt {
+    display: inline-block;
+  }
+  .profile-hide {
+    display: none !important;
+  }
+}
