@@ -7,6 +7,9 @@ a {
 a:hover {
   color: $color-secondary-2-1;
 }
+* {
+  box-sizing: border-box;
+}
 article {
   background-color: #fff;
   flex: 3 1;
