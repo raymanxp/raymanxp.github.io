@@ -6,6 +6,15 @@ My Resume
 
 ## Release Notes
 
+### v2.0.3
+* Update content from review comments
+
+### v2.0.2
+* Update to layout
+
+### v2.0.1
+* Update Intro
+
 ### v2.0.0
 * Added styles
 * Added SVG Icons
