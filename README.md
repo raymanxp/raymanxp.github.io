@@ -6,6 +6,9 @@ My Resume
 
 ## Release Notes
 
+### v2.0.5
+* Added new timeline and experience entry
+
 ### v2.0.4
 * Added anchor link for telephone entry
 
